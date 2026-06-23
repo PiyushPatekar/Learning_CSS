@@ -284,3 +284,129 @@ p::first-letter{
 .box-8:hover{
     transform: matrix(1 2 1 2 );
 }
+
+/* div{
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+    position: relative;
+    animation: movingphoto;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-delay: 3s;
+    animation-direction: normal;
+}
+
+@keyframes movingphoto{
+    0%{background-color: beige;left: 0px;top: 0px;}
+    25%{background-image: url(../images/rose.png); background-color: yellow; left: 300px;top: 0px;}
+    50%{background-image: url(../images/rose.png); background-color: darksalmon; left: 300px;top: 300px;}
+    75%{background-image: url(../images/flowers.png); background-color: burlywood; left: 0px;top: 300px;}
+    100%{background-color: beige;left: 0px;top: 0px;}
+} */
+
+.bg_image2{
+    background-color: white;
+    background-image: url(../images/flowers.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    width: 200px;
+    padding: 30px;
+    list-style-type: none;
+}
+li{
+    padding: 10px;
+    border: 2px solid red;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    animation: itemsmoving;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+}
+
+li:nth-child(odd){
+    background-color: yellow;
+    border: 2px solid red;
+    padding: 10px;
+    border: 2px solid yellow;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    animation: itemsmoving;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-delay: 5s;
+}
+@keyframes itemsmoving{
+    0%{background-color: yellow;left: 0px;top: 0px;}
+    50%{background-color: yellow; left: 400px;top: 0px;}
+    75%{background-color: yellow; left: 400px;top: 0px;}
+    100%{background-color: yellow;left: 0px;top: 0px;}
+}
+
+li:nth-child(even){
+    background-color: green;
+    border: 2px solid red;
+    padding: 10px;
+    border: 2px solid green;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    animation: itemsmoving2;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    transform-origin: left;
+}
+@keyframes itemsmoving2{
+    from{transform: rotateY('90deg');}
+    10%,50%{transform: rotateY('0');}
+    60%,to{transform: rotateY('90deg');}
+}
+
+.text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    font-size: 70px;
+    font-weight: 700;
+}
+.text-container > b{
+    height: 80px;
+    box-shadow: 0px 20px 10px gray;
+    background-color: orange;
+    background-clip: text;
+    color: transparent;
+    transform-origin: bottom;
+    animation: getUpDown 7s infinite;
+}
+.text-container > b:nth-child(1){
+    animation-delay: 0.10s;
+}
+.text-container > b:nth-child(2){
+    animation-delay: 0.30s;
+}
+.text-container > b:nth-child(3){
+    animation-delay: 0.45s;
+}
+.text-container > b:nth-child(4){
+    animation-delay: 0.50s;
+}
+.text-container > b:nth-child(5){
+    animation-delay: 0.75s;
+}
+.text-container > b:nth-child(6){
+    animation-delay: 1s;
+}
+
+@keyframes getUpDown{
+    from{transform: rotateX(-85deg);}
+    10%,50%{transform: rotateX(0);}
+    60%,to{transform: rotateX(-85deg);}
+}
